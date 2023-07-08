@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Compression with Shannon-Fano Algorithm</title>
+    <link rel="stylesheet" href="./static/style/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="top-page">
+      <h1>Image Compression with Shannon-Fano Algorithm</h1>
+    </div>
+    <div class="content">
+      <form action="/compress" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <input id="submit" type="submit" value="Compress">
+      </form>
+    </div>
+    {% if compressed_image %}
+      <h2>Compressed Image:</h2>
+      <img src="{{ compressed_image }}" alt="Compressed Image">
+    {% endif %}
+  </body>
+</html>
